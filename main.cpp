@@ -9,18 +9,21 @@ int main()
 {
 	Hilo *h1 = new Hilo();
 	h1->run();
+	bool *vive = h1->getVive();
 	int *dinero=h1->getDinero();
-	Hilo2 *h2= new Hilo2(dinero);
+	Hilo2 *h2= new Hilo2(dinero,vive);
 	h2->run();
 	int *vida = h1->getVida();
 	int *vidaMax = h1->getVidaMax();
-	bool *vive = h1->getVive();
 	Hilo3 *h3=new Hilo3(vida,vidaMax,vive);
 	h3->run();
 	int opcion=0;
 	while(opcion!=3)
 	{
-		
+		if(*h1->getVive()==false)
+		{
+			return 0;
+		}
 		cout<<"*************Juego en linea*************\n\n1.Ver datos\n2.Curar vida\n3.Salir\n\nPrecionar para seleccionar...";
 		getch();
 		cout<<"\n\nSeleccion: ";

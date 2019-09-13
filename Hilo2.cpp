@@ -17,9 +17,11 @@ class Hilo2
 		bool vive;
 		int espera;
 		int *dinero;
+		bool *viveOtro;
 	public:
-		Hilo2(int *din)
+		Hilo2(int *din, bool *viOt)
 		{
+			viveOtro=viOt;
 			dinero=din;
 			vive=true;
 			espera=7000;

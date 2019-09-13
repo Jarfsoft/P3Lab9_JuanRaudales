@@ -82,7 +82,6 @@ class Hilo
 		void runnerEstatico()
 		{
 			srand(time(NULL));
-				
 			while(vive)
 			{
 				Sleep(espera);
